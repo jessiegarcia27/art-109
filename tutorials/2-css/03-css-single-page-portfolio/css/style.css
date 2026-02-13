@@ -1,3 +1,19 @@
+/* CSS resets */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* General CSS */
+
 body {
     background-color: #ffeed5;
+}
+header {
+    padding: 40px;
+  margin-bottom: 40px;
+    background-color: azure;
+    text-align: center;
 }
