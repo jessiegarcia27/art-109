@@ -31,14 +31,19 @@ header h1 {
 }
 
 main {
-    max-width: 60rem;
-    margin: 2rem auto;
+
 }
 
 .about-section, .portfolio-section, .contact-section {
     margin-bottom: 5rem;
 }
+.about-content, .portfolio-content, .contact-content {
+    max-width: 60rem;
+    margin: 2rem auto;
+}
 
 .portfolio-item {
     margin-bottom: 5rem;
+    background-color: aliceblue;
 }
+
