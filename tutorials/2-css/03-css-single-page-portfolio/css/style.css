@@ -30,6 +30,18 @@ header {
 header h1 {
     font-size: 3rem;
 }
+nav {
+    position:fixed
+    right 2rem ;
+    top: 2rem ;
+}
+
+nav a {
+   text-decoration: none; 
+   color: black;
+   display: inline-block;
+   margin: 0 1rem;
+}
 
 .about-section,
 .portfolio-section,
