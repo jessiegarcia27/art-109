@@ -43,7 +43,7 @@ header h1 {
 .portfolio-item {
 margin-bottom: 5rem;
 background-color: cornsilk;
-padding: 2rem;
+padding: 4rem;
 text-align: center;
 }
 .portfolio-item img {
@@ -51,6 +51,14 @@ max-width: 100%;
 margin: 0 auto;
 display: block;
 }
+.portfolio-item h3 {
+    margin: 1rem 0;
+}
+
+.portfolio-item p {
+    font-size: 1.2rem;
+}
+
 
 
 .about-section {
