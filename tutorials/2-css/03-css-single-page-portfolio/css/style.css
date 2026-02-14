@@ -36,21 +36,38 @@ header h1 {
 .contact-section {
     margin-bottom: 5rem;
 }
-.about-content, .portfolio-content, .contact-content {
-    max-width: 60rem;
-    margin: 2rem auto;
+
+.about-content,
+.portfolio-content,
+.contact-content {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+padding: 2rem 0;
+}
+
 .portfolio-item {
-margin-bottom: 5rem;
-background-color: cornsilk;
-padding: 4rem;
-text-align: center;
+    margin-bottom: 5rem;
+    background-color: cornsilk;
+    padding: 4rem;
+    text-align: center;
+    border: 2px #5d60ff solid;
+    border-radius: .5rem;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
+
 .portfolio-item img {
-max-width: 100%;
-margin: 0 auto;
-display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: .5rem;
 }
+
 .portfolio-item h3 {
     margin: 1rem 0;
 }
@@ -64,6 +81,16 @@ display: block;
 .about-section {
     background-color: aliceblue;
 }
+
 .portfolio-section {
     background-color: rgb(179, 218, 255);
+}
+footer {
+    background-color: #000137;
+    color: white;
+    padding: 1rem;
+    text-align: end;
+}
+footer p {
+    font-size: 1.2rem;
 }
