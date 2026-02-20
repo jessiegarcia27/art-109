@@ -1,11 +1,19 @@
 body {
-   animation: change-color 10s infinite alternate;
+    animation: change-color 10s infinite alternate;
 }
 
 @keyframes change-color {
-    0% {background-color:antiquewhite;}
-    50% {background-color: darkseagreen;}
-    100% {background-color: darkblue;}
+    0% {
+        background-color: antiquewhite;
+    }
+
+    50% {
+        background-color: darkseagreen;
+    }
+
+    100% {
+        background-color: darkblue;
+    }
 
 }
 
@@ -17,9 +25,14 @@ body {
     animation: skew 3s infinite alternate;
 }
 
-@keyframes skew{
-    0% {transform: skew(0deg, 0deg);}
-     100% {transform: skew(30deg, 20deg);}
+@keyframes skew {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+
+    100% {
+        transform: skew(30deg, 20deg);
+    }
 }
 
 
@@ -61,12 +74,22 @@ body {
     transform: scale(1.5);
 }
 
-.loading{
+.Loading {
     background-color: blueviolet;
-    animation: stretch 5s;
+    animation: stretch 5s 3 normal;
+    width: 80vw;
 }
 
-@keyframes stretch{
-0% {width:100px;}
-100% {width: 80vw;}
+@keyframes stretch {
+    0% {
+        width: 100px;
+    }
+
+    100% {
+        width: 80vw;
+    }
+}
+
+.Jessie:hover{
+    transform: skew(700px);
 }
