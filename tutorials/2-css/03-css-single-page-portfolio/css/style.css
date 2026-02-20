@@ -43,6 +43,11 @@ nav a {
    margin: 0 1rem;
 }
 
+nav a:hover {
+    color: #b7fa70
+}
+
+
 .about-section,
 .portfolio-section,
 .contact-section {
