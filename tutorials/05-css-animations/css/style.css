@@ -1,0 +1,72 @@
+body {
+   animation: change-color 10s infinite alternate;
+}
+
+@keyframes change-color {
+    0% {background-color:antiquewhite;}
+    50% {background-color: darkseagreen;}
+    100% {background-color: darkblue;}
+
+}
+
+
+.title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
+}
+
+@keyframes skew{
+    0% {transform: skew(0deg, 0deg);}
+     100% {transform: skew(30deg, 20deg);}
+}
+
+
+.square {
+    background-color: rgb(119, 119, 247);
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+
+}
+
+.square:hover {
+    background-color: black;
+    transform: rotate(30deg);
+}
+
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    color: rgb(255, 255, 255);
+    background-color: cadetblue;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+
+
+}
+
+.button:hover {
+    background-color: brown;
+    color: bisque;
+    transform: scale(1.5);
+}
+
+.loading{
+    background-color: blueviolet;
+    animation: stretch 5s;
+}
+
+@keyframes stretch{
+0% {width:100px;}
+100% {width: 80vw;}
+}
