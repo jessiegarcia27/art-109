@@ -29,7 +29,11 @@ header {
 
 header h1 {
     font-size: 3rem;
+    text-decoration: underline;
+    text-decoration: wavy;
+    text-decoration-color:#000137;
 }
+
 nav {
     position:fixed 
     right 2rem ;
@@ -44,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #b7fa70
+    background-color: #458104
 }
 
 
