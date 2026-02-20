@@ -106,4 +106,5 @@ animation: elongate 2s infinite alternate;
 
 .Jessie:hover{
     transform: skew(100000deg);
+    font-size: large;
 }
