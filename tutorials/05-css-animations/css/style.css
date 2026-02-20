@@ -46,6 +46,20 @@ body {
 
 }
 
+.circle{
+background-color: coral;
+width: 300px;
+height: 300px;
+border-radius: 300px;
+margin: auto;
+animation: elongate 2s infinite alternate;
+}
+
+@keyframes elongate{ 
+0% {width: 300px;}
+50% {width: 600px;}
+100% {width: 900px}
+}
 .square:hover {
     background-color: black;
     transform: rotate(30deg);
@@ -91,5 +105,5 @@ body {
 }
 
 .Jessie:hover{
-    transform: skew(700px);
+    transform: skew(100000deg);
 }
