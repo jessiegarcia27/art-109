@@ -1,0 +1,40 @@
+ .title {
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ .square {
+     background-color: rgb(119, 119, 247);
+     width: 200px;
+     height: 200px;
+     border-radius: 20px;
+     margin: 50px auto;
+     transition: all 1s;
+
+ }
+
+ .square:hover {
+     background-color: black;
+     transform: rotate(30deg);
+ }
+
+
+ .button-div {
+     text-align: center;
+ }
+
+ .button {
+     color: rgb(255, 255, 255);
+     background-color: cadetblue;
+     padding: 15px;
+     border-radius: 10px;
+     text-decoration: none;
+     display: inline-block;
+     transition: all .5s;
+
+
+ }
+ .button:hover {
+    background-color: brown;
+    color: bisque;
+    transform: scale(1.5);
+ }
