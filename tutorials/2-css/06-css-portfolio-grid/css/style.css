@@ -43,6 +43,10 @@ img {
 
 /* --------General CSS----------- */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color-1);
     color: var(--font);
@@ -64,13 +68,72 @@ header h1 {
 nav a {
     text-decoration: none;
     color: var(--font);
-    margin: 0 1rem;
-    transition: all .5s ease;
+    /* margin: 0 1rem;
+    transition: all .5s ease; */
 }
 
 nav a:hover {
     color: var(--accent-3)
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--font);
+    font-size: 3rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 750px) {
+   .navbar {
+    align-items: flex-start;
+   }
+   
+   .nav {
+    display: flex;
+    flex-direction: column;
+   }
+
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+.nav-menu.active {
+   display: flex;
+   flex-direction: column;
+   background-color: var(--font);
+   padding: 1rem;
+ 
+}
+
+.nav-menu a {
+  color: var(--bg-color-1);
+}
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+}
+
+
+
 
 main {
     margin: 0;
@@ -82,8 +145,8 @@ main {
     }
 }
 
-@media (max-width: 750px){
-    main{
+@media (max-width: 750px) {
+    main {
         margin: 1rem;
     }
 }
