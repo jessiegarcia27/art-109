@@ -11,6 +11,18 @@
 }
 
 /* -------CSS resets------------ */
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -73,6 +85,12 @@ nav a:hover {
 margin: 2rem 0;
 }
 
+.portfolio-item {
+    padding: 1rem;
+    background-color: var(--accent-3);
+    color: #111;
+
+}
 
 
 footer {
@@ -96,8 +114,10 @@ footer  img {
 .flex-container-grid {
     display:flex;
     flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .flex-item-grid {
-    flex: 0 0 30%;
+    flex: 0 0 17rem;
 }
