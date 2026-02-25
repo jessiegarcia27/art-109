@@ -1,13 +1,13 @@
 /* ------color palette------------- */
 
 :root {
---bg-color-1: #111;
---bg-color-2: aliceblue;
---font: #FFF;
---accent-1: #000137;
---accent-2:rgb(179, 218, 255);
---accent-3: #c9caff;
---dark: #333;
+    --bg-color-1: #111;
+    --bg-color-2: aliceblue;
+    --font: #FFF;
+    --accent-1: #000137;
+    --accent-2: rgb(179, 218, 255);
+    --accent-3: #c9caff;
+    --dark: #333;
 }
 
 /* -------CSS resets------------ */
@@ -16,7 +16,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -44,15 +44,17 @@ img {
 /* --------General CSS----------- */
 
 body {
-background-color: var(--bg-color-1);
-color: var(--font);
-font-size: 1.5rem;
-line-height: 1.5;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--bg-color-1);
+    color: var(--font);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* text-align: justify; */
 }
 
 header {
     padding: 5rem 2rem;
+    margin-bottom: 7rem;
 }
 
 header h1 {
@@ -60,45 +62,77 @@ header h1 {
 }
 
 nav a {
-text-decoration: none;
-color: var(--font);
-margin: 0 1rem;
-transition: all .5s ease;
+    text-decoration: none;
+    color: var(--font);
+    margin: 0 1rem;
+    transition: all .5s ease;
 }
 
 nav a:hover {
     color: var(--accent-3)
+}
 
+main {
+    margin: 0;
+}
+
+@media (max-width: 1030px) {
+    main {
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 750px){
+    main{
+        margin: 1rem;
+    }
 }
 
 
 
+.about-content,
+.portfolio-content,
+.contact-content {
+    max-width: 60rem;
+    margin: 0 auto 7rem auto;
 
-.about-content, .portfolio-content, .contact-content {
-     max-width: 60rem;
-     margin: 5rem auto;
-      
-    
+
 }
 
-.about-content h2, .portfolio-content h2, .contact-content h2{
-margin: 2rem 0;
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    margin: 2rem 0;
 }
 
 .portfolio-item {
     padding: 1rem;
     background-color: var(--accent-3);
     color: #111;
+    border-radius: .3rem;
 
+
+}
+
+.portfolio p {
+    font-size: 1rem;
+}
+
+.portfolio-item h3 {
+    font-size: 1.3rem;
+}
+
+.portfolio-item img {
+    border-radius: .3rem;
 }
 
 
 footer {
 
- padding: 1rem 2rem;   
+    padding: 1rem 2rem;
 }
 
-footer  img {
+footer img {
     display: inline;
     max-width: 3rem;
     margin: 0 .5rem;
@@ -112,7 +146,7 @@ footer  img {
 }
 
 .flex-container-grid {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
