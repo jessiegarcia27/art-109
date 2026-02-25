@@ -116,8 +116,9 @@ footer  img {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    align-items: stretch;
 }
 
 .flex-item-grid {
-    flex: 0 0 17rem;
+    flex: 1 0 17rem;
 }
