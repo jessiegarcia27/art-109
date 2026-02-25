@@ -63,9 +63,27 @@ main{
 }
 
 img {
-    width: 15rem;
+    width: 30rem;
 }
 
 .hidden {
     display: none;
+}
+
+#img1 {
+   position: absolute; 
+   top: 3rem;
+   right: 3rem;
+}
+
+#img2 {
+   position: absolute; 
+   top: 6rem;
+   left: 13rem;
+}
+
+#img3 {
+   position: absolute; 
+   top: 5rem;
+   right: 6rem;
 }
