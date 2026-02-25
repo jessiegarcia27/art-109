@@ -62,3 +62,10 @@ main{
     margin: 0 auto;
 }
 
+img {
+    width: 15rem;
+}
+
+.hidden {
+    display: none;
+}
