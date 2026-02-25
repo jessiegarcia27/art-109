@@ -30,6 +30,35 @@ img {
   display: block;
 }
 
+
+/* ---- Color Variables------- */
+
+:root {
+    --bg: #d4e8ff;
+    --font: #000;
+}
+
+body.dark {
+   --bg: #000;
+   --font: #d4e8ff;
+
+}
+
+
+/* ----General Css------ */
+
+body {
+    color: var(--font);
+    background-color: var(--bg);
+}
+
+
 header {
     padding: 5rem;
 }
+
+main{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
