@@ -1,0 +1,62 @@
+/* ------color palette------------- */
+
+:root {
+--bg-color-1: #111;
+--bg-color-2: aliceblue;
+--font: #FFF;
+--accent-1: #000137;
+--accent-2:rgb(179, 218, 255);
+--accent-3: #c9caff;
+--dark: #333;
+}
+
+/* -------CSS resets------------ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* respecting user font size preference  */
+html {
+    font-size: 100%;
+}
+
+/* make images responsive  */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/* --------General CSS----------- */
+
+body {
+background-color: var(--bg-color-1);
+color: var(--font);
+font-size: 1.5rem;
+line-height: 1.5;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    padding: 5rem 2rem;
+}
+
+.about-content, .portfolio-content, .contact-content {
+     max-width: 60rem;
+     margin: 5rem auto;
+      
+    
+}
+
+.about-content h2, .portfolio-content h2, .contact-content h2{
+margin: 2rem 0;
+}
+
+
+
+footer {
+
+ padding: 1rem 2rem;   
+}
