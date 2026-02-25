@@ -92,3 +92,12 @@ footer  img {
     justify-content: space-between;
     align-items: center;
 }
+
+.flex-container-grid {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.flex-item-grid {
+    flex: 0 0 30%;
+}
