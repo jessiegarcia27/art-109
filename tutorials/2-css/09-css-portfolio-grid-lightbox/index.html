@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/baguetteBox.css">
 </head>
 
 <body>
@@ -46,7 +47,7 @@
                         <div class="flex-container-grid">
 
                             <div class="portfolio-item flex-item-grid">
-                                <img src="images/safebuddyimage 2.jpg" alt="Project About Fire Safety">
+                                <a href="images/safebuddyimage 2.jpg" data-caption="Caption for lightbox"><img src="images/safebuddyimage 2.jpg" alt="Project About Fire Safety"></a>
                                 <h3>SafeBuddy</h3>
                                 <p>Safebuddy is a fire safety toy. When it detects a fire it quickly switches into
                                     safety
@@ -54,7 +55,7 @@
                             </div>
 
                             <div class="portfolio-item flex-item-grid">
-                                <img src="images/ultrasonic-scaler 2.jpg" alt="Image Redesign Ultrasonic Scaler">
+                                <a href="images/ultrasonic-scaler 2.jpg" data-caption="Magic 4 Real"><img src="images/ultrasonic-scaler 2.jpg" alt="Image Redesign Ultrasonic Scaler"></a>
                                 <h3>Redesign UltraSonic Scaler</h3>
                                 <p>This redesign of a scary dentist tool focuses on ensuring communication is fluid
                                     between
@@ -62,7 +63,7 @@
                             </div>
 
                             <div class="portfolio-item flex-item-grid">
-                                <img src="images/teakettle.jpg" alt="Redesign of a Tea Kettle">
+                                <a href="images/teakettle.jpg" data-caption="Lumbre Tea Kettle cdiubcdui cbciudshcduishcd cdiushciudshcuidhcd cduishcuidwhgiurehgod bcvdishcuiwhcwdscsd ncjdkbchidw cdikbcidbcid cdisbcidbcd"><img src="images/teakettle.jpg" alt="Redesign of a Tea Kettle"></a>
                                 <h3>Lumbre</h3>
                                 <p>Lumbre is not your average tea kettle. With a completely new look, it also strains
                                     your
@@ -133,6 +134,12 @@
         </div>
     </footer>
 <script src="js/hamburger.js"></script>
+<script src="js/baguetteBox.js"></script>
+<script>
+    baguetteBox.run('.flex-container-grid',{
+captions: true,
+    })
+</script>
 </body>
 
 </html>
