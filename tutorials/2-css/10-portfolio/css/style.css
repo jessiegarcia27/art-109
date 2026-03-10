@@ -274,3 +274,7 @@ footer p {
 .social-media {
     padding: 3rem 0;
 }
+
+.sb-prototype {
+    display: flex;
+}
