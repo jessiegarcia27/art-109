@@ -262,3 +262,12 @@ footer p {
 .flex-item-grid {
     flex: 1 0 17rem;
 }
+
+.project-stat {
+    padding: 6rem;
+}
+
+.project-exploration {
+    padding: 2rem 0;
+}
+
