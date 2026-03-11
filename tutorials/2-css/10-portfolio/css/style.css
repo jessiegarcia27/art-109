@@ -278,3 +278,12 @@ footer p {
 .sb-prototype {
     display: flex;
 }
+
+.description-sb{
+    padding: 2rem;
+    color: rgb(3, 0, 47);
+}
+
+.sb-storyboard {
+    padding: 2rem 0;
+}
