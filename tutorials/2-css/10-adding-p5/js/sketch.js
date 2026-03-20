@@ -1,7 +1,7 @@
 let canvas;
 let xPos = 0;
 let yPos = 0;
-let easing = .5;
+let easing = .4;
 
 
 function setup () {
@@ -12,7 +12,9 @@ function setup () {
 }
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-}
+} 
+
+
 function draw () {
  clear();
 
