@@ -20,3 +20,10 @@ button:not(#almostBtn) {
  color: rgb(0, 0, 0);
 }
 
+#popupBtn {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    color: blue;
+    background-color: rgb(255, 207, 236);
+}   
