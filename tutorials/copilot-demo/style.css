@@ -1,0 +1,119 @@
+/* Style for the body and overall page */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Funny, cartooney font */
+    background-color: #ffeb3b; /* Bright yellow background for silliness */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container for the main content */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20px; /* Rounded corners for cartooney look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    position: relative;
+}
+
+/* Heading style */
+h1 {
+    font-size: 2.5em;
+    color: #ff5722; /* Bright orange */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+/* Paragraph style */
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Counter display */
+.counter {
+    font-size: 4em;
+    font-weight: bold;
+    color: #2196f3; /* Blue */
+    background-color: #e3f2fd;
+    border-radius: 50%; /* Circular counter */
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Button style */
+button {
+    font-family: inherit;
+    font-size: 1.2em;
+    background-color: #4caf50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slight grow on hover for fun */
+}
+
+/* Guilt popup styles */
+.guilt-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    text-align: center;
+    z-index: 1000;
+    max-width: 400px;
+}
+
+.guilt-popup canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.guilt-popup p {
+    font-size: 1.5em;
+    color: #f44336; /* Red for guilt */
+    margin-bottom: 20px;
+}
+
+/* Hidden class for popup */
+.hidden {
+    display: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .counter {
+        width: 120px;
+        height: 120px;
+        font-size: 3em;
+    }
+    button {
+        font-size: 1em;
+        padding: 12px 24px;
+    }
+}

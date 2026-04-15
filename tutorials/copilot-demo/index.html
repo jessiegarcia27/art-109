@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Guilt Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phone Guilt Tracker</h1>
+        <p>How many times have you looked at your phone today?</p>
+        <div class="counter">
+            <span id="count">0</span>
+        </div>
+        <button id="lookButton">I Just Looked at My Phone!</button>
+        <div id="guiltPopup" class="guilt-popup hidden">
+            <canvas id="guiltCanvas" width="300" height="200"></canvas>
+            <p id="guiltMessage">Feel the guilt!</p>
+            <button id="closePopup">Okay, I feel bad now</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
