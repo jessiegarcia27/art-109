@@ -1,9 +1,13 @@
 
-var express = require("express");
 
-var app = express();
-var server = app.listen(3000);
+console.log("file is running");
 
+const express = require("express");
 
+const app = express();
 
-console.log("hello world");
+app.use(express.static("."));
+
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
+});
