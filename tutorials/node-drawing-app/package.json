@@ -1,0 +1,16 @@
+{
+  "name": "drawing-app",
+  "version": "1.0.0",
+  "description": "tutorial 15",
+  "license": "ISC",
+  "author": "Jessie Garcia",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
