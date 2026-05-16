@@ -53,11 +53,24 @@ function createQuestion() {
 
 function showEnding() {
 
+
     document.body.innerHTML = `
-        <div id="endingScreen"></div>
+        <div id="endingScreen">
+
+            <div id="finalMessage">
+                No answer was ever enough.
+            </div>
+
+            <button id="revealButton">
+                Becoming Latino
+            </button>
+
+        </div>
     `;
 
+    const button = document.getElementById("revealButton");
 
+    button.addEventListener("click", startImageSequence);
 
 
     const row = document.createElement("div");
