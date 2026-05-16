@@ -15,62 +15,116 @@ let count = 0;
 const maxQuestions = 5;
 
 button.addEventListener("click", () => {
+
     const userAnswer = input.value;
 
     if (userAnswer.trim() === "") return;
 
-    createQuestion ();
-      if (count >= maxQuestions) {
-          setTimeout(() => {
-
-            showEnding();
-
-        }, 1000);
-
-    }
-
     input.value = "";
+
+    createQuestion();
+
 });
 
 function createQuestion() {
+
     const text = document.createElement("div");
 
     text.classList.add("floatingText");
-     text.innerText =
-    followUpQuestions[count % followUpQuestions.length];
 
-  text.style.left = Math.random() * window.innerWidth + "px";
-  text.style.top = Math.random() * window.innerHeight + "px";
+    text.innerText =
+        followUpQuestions[count % followUpQuestions.length];
 
-  responses.appendChild(text);
+    text.style.left = Math.random() * window.innerWidth + "px";
+    text.style.top = Math.random() * window.innerHeight + "px";
 
-  count++;
+    responses.appendChild(text);
 
-  function showEnding () {
+    count++;
+
+    if (count >= maxQuestions) {
+
+        setTimeout(() => {
+            showEnding();
+        }, 1000);
+
     }
+}
 
- document.body.innerHTML = `
-<div id="endingScreen">
+function showEnding() {
 
-<div class="imageContainer">
+    document.body.innerHTML = `
+        <div id="endingScreen"></div>
+    `;
 
-<img src="images/family.jpg" class="endingImage">
 
- <img src="images/community.jpg" class="endingImage">
 
-            <img src="images/graduation.jpg" class="endingImage">
 
-</div>
+    const row = document.createElement("div");
+row.classList.add("imageRow");
 
-<h1 class="finalMessage">
-No answer was ever enough.
-</h1>
 
-<p class="subMessage">
-We should not have to justify our belonging.
-</p>
+    const screen = document.getElementById("endingScreen");
 
-</div>
-`;
-  }
+    const sequence = [
+        {
+            type: "image",
+            src: "images/family.jpg",
+            text: "Families building lives"
+        },
+        {
+            type: "image",
+            src: "images/community.jpg",
+            text: "Communities thriving together"
+        },
+        {
+            type: "image",
+            src: "images/graduation.jpg",
+            text: "Success earned, not given"
+        },
+        {
+            type: "final",
+            text: "No answer was ever enough."
+        }
+    ];
+
+    let delay = 0;
+
+    sequence.forEach((item) => {
+        screen.appendChild(row);
+        delay += 1500;
+
+        setTimeout(() => {
+
+            const container = document.createElement("div");
+            container.classList.add("endingItem");
+
+            if (item.type === "image") {
+
+                const img = document.createElement("img");
+                img.src = item.src;
+                img.classList.add("endingImage");
+
+                const caption = document.createElement("div");
+                caption.classList.add("endingText");
+                caption.innerText = item.text;
+
+                container.appendChild(img);
+                container.appendChild(caption);
+
+            } else if (item.type === "final") {
+
+                const text = document.createElement("div");
+                text.classList.add("finalMessage");
+                text.innerText = item.text;
+
+                container.appendChild(text);
+            }
+
+        row.appendChild(container);
+
+
+        }, delay);
+    });
+}
 
