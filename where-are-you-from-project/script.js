@@ -29,7 +29,6 @@ button.addEventListener("click", () => {
 function createQuestion() {
 
     const text = document.createElement("div");
-
     text.classList.add("floatingText");
 
     text.innerText =
@@ -43,16 +42,11 @@ function createQuestion() {
     count++;
 
     if (count >= maxQuestions) {
-
-        setTimeout(() => {
-            showEnding();
-        }, 1000);
-
+        setTimeout(showEnding, 1000);
     }
 }
 
 function showEnding() {
-
 
     document.body.innerHTML = `
         <div id="endingScreen">
@@ -69,75 +63,53 @@ function showEnding() {
     `;
 
     const button = document.getElementById("revealButton");
-
     button.addEventListener("click", startImageSequence);
+}
 
-
-    const row = document.createElement("div");
-row.classList.add("imageRow");
-
+function startImageSequence() {
 
     const screen = document.getElementById("endingScreen");
+    screen.innerHTML = "";
 
-    const sequence = [
-        {
-            type: "image",
-            src: "images/family.jpg",
-            text: "Families building lives"
-        },
-        {
-            type: "image",
-            src: "images/community.jpg",
-            text: "Communities thriving together"
-        },
-        {
-            type: "image",
-            src: "images/graduation.jpg",
-            text: "Success earned, not given"
-        },
-        {
-            type: "final",
-            text: "No answer was ever enough."
-        }
+    const images = [
+        "images/family1.jpg",
+        "images/family2.jpg",
+        "images/work.jpg",
+        "images/passport.jpg",
+        "images/mexcity.jpg"
     ];
 
     let delay = 0;
 
-    sequence.forEach((item) => {
-        screen.appendChild(row);
-        delay += 1500;
+    images.forEach((src) => {
+
+        delay += 300;
 
         setTimeout(() => {
 
-            const container = document.createElement("div");
-            container.classList.add("endingItem");
+            const img = document.createElement("img");
+            img.src = src;
+            img.classList.add("popImage");
 
-            if (item.type === "image") {
+            img.style.position = "absolute";
+            img.style.left = Math.random() * window.innerWidth * 0.7 + "px";
+            img.style.top = Math.random() * window.innerHeight * 0.7 + "px";
 
-                const img = document.createElement("img");
-                img.src = item.src;
-                img.classList.add("endingImage");
-
-                const caption = document.createElement("div");
-                caption.classList.add("endingText");
-                caption.innerText = item.text;
-
-                container.appendChild(img);
-                container.appendChild(caption);
-
-            } else if (item.type === "final") {
-
-                const text = document.createElement("div");
-                text.classList.add("finalMessage");
-                text.innerText = item.text;
-
-                container.appendChild(text);
-            }
-
-        row.appendChild(container);
-
+            screen.appendChild(img);
 
         }, delay);
-    });
-}
 
+    });
+
+    setTimeout(() => {
+
+        const finalText = document.createElement("div");
+        finalText.classList.add("finalMessage");
+
+        finalText.innerText =
+            "We are not questions. We are histories already here.";
+
+        screen.appendChild(finalText);
+
+    }, delay + 1200);
+}
