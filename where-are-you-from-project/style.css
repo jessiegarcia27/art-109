@@ -65,15 +65,15 @@ button {
 }
 
 #endingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+
     width: 100vw;
     height: 100vh;
-    background: black;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+    background: black;
+    overflow: hidden;
 }
 
 .imageRow {
@@ -112,12 +112,15 @@ button {
 
 
 
-
 .popImage {
     position: absolute;
+
     width: 180px;
     height: 240px;
     object-fit: cover;
+
+    opacity: 1;
+    z-index: 10;
 
     animation: popIn 0.4s ease;
 }
@@ -133,4 +136,44 @@ button {
         transform: scale(1);
         filter: blur(0);
     }
+}
+
+.finalGrid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    gap: 0;
+}
+
+.finalGrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.finalOverlayText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 8rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    z-index: 10;
+    pointer-events: none;
+
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
 }
